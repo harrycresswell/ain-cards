@@ -1,0 +1,14 @@
+html, :root {
+	box-sizing: border-box;
+	font-family: $base-font-family;
+	font-size: $base-font-size;
+	color: $color--gray-dark;
+	-webkit-font-smoothing: antialiased;
+}
+
+input[type=text] {
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+}
+
+//body { overflow: hidden;}

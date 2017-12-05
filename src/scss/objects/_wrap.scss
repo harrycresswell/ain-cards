@@ -1,0 +1,9 @@
+// Global width for wrapper
+$wrap-width: 65rem !default;
+
+.o-wrap {
+    display: block;
+    max-width: $wrap-width;
+    margin: 0 auto;
+    padding: 0 2rem;
+}

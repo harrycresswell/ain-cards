@@ -1,0 +1,35 @@
+// Base
+$base-font-family: "myriad-pro", sans-serif;
+$base-font-size:   18px;
+$base-line-height: 1.6em;
+$base-font-weight: 400;
+$base-line-height: 36px;
+
+
+// Font weight scale
+$font-weight-light:   300;
+$font-weight-regular: 400;
+$font-weight-medium:  500;
+$font-weight-bold:  600;
+
+
+// Font size scale
+$font-size--xxxl: 2.111em; // 38px
+$font-size--xxl: 1.778em; // 32px
+$font-size--xl: 1.333em;  // 24px
+$font-size--l: 1.111em;   // 20px
+$font-size--m: $base-font-size;   // 18x
+$font-size--s: 0.889em;   // 16px
+$font-size--xs: 0.778em;  // 14px
+$font-size--xxs: 0.667em;  // 12px
+
+// Line height scale
+$line-height-xl: 1.6em;
+$line-height-l: 1.4em;
+$line-height-m: $base-line-height;
+$line-height-s: 1.4em;
+$line-height-xs: 1.2em;
+
+
+// Spacing
+$spacing-unit:     30px;

@@ -1,0 +1,36 @@
+*, ::after, ::before {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+input, button, textarea, select {
+    font: inherit;
+    appearance: none;
+}
+
+input[type=checkbox] {
+    appearance: checkbox;
+}
+
+input[type=radio] {
+    appearance: radio;
+}
+
+img[data-sizes]{
+  width:100%;
+}
+
+ul, ol {
+    margin-left: 0rem;
+    padding-left: 0rem;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+a {
+    color: $color--brand-blue;
+}
