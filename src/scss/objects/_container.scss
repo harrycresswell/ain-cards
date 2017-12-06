@@ -1,0 +1,19 @@
+/**
+ * Container
+ */
+
+/*
+Object: Core Container
+*/
+
+.Container {
+  padding: 60px 0;
+}
+
+/**
+ * Object Modifier: Container Background Grey
+ */
+
+.Container--bg-grey {
+  background: $color--gray-lightest;
+}
