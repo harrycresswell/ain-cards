@@ -1,0 +1,45 @@
+/**
+ * Component: Card
+ */
+
+.Card {
+  background: $color--white;
+  border: solid 1px $color--border;
+  border-radius: $radius--default;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  position: relative;
+  top: 0;
+  transition: all .1s ease-in;
+
+  &:hover {
+    top: -2px;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+  }
+}
+
+.Card-thumb {
+  background: $color--darker-still;
+  background-size: cover;
+  background-position: center center;
+  min-height: 184px;
+}
+
+.Card-avatar {
+  margin: 32px;
+}
+
+.Card-content {
+  padding: 32px;
+}
+
+.Card-title {
+  font-size: 20px;
+  margin: 0;
+  color: #333;
+}
+
+.Card-author {
+
+}
