@@ -1,8 +1,11 @@
-.Grid {
+/**
+ * Display Grid
+ */
+ .Grid {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
-  grid-gap: 20px;
+  grid-gap: 32px;
   margin: 0 auto;
   max-width: 1240px;
   width: 90%;
@@ -16,6 +19,6 @@
 
 @include at-least($small-screen) {
   .Grid {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
