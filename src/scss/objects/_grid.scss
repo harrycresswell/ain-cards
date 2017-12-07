@@ -1,24 +1,37 @@
 /**
  * Display Grid
  */
+
  .Grid {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   grid-gap: 32px;
   margin: 0 auto;
-  max-width: 1240px;
+  max-width: 1170px;
   width: 90%;
 }
 
 @include at-least($phone-wide) {
-  .Grid {
+  .Grid--2 {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @include at-least($small-screen) {
-  .Grid {
+  .Grid--2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@include at-least($phone-wide) {
+  .Grid--3 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@include at-least($small-screen) {
+  .Grid--3 {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
