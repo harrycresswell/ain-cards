@@ -5,7 +5,7 @@
 .Card {
   background: $color--white;
   border: solid 1px $color--border;
-  border-radius: $radius--default;
+  border-radius: $radius--10;
   display: flex;
   flex-direction: column;
   min-height: 100%;
@@ -19,27 +19,121 @@
   }
 }
 
+.Card--landscape {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@include at-least($phone-wide) {
+    .Card--landscape {
+      grid-template-columns: 1fr 1fr;
+    }
+}
+
 .Card-thumb {
   background: $color--darker-still;
   background-size: cover;
   background-position: center center;
-  min-height: 184px;
+  min-height: 152px;
+  padding: 24px;
+  position: relative;
+}
+
+.Card-thumb--portrait {
+  border-radius: $radius--10 $radius--10 0 0;
+}
+
+.Card-thumb--landscape {
+  border-radius: $radius--10 $radius--10 0 0;
+}
+
+@include at-least($phone-wide) {
+  .Card-thumb--landscape {
+    border-radius: $radius--10 0 0 $radius--10;
+  }
 }
 
 .Card-avatar {
-  margin: 32px;
+  position: absolute;
+  bottom: 24px;
 }
 
 .Card-content {
-  padding: 32px;
+  padding: 24px;
+}
+
+.Card-progress {
+
 }
 
 .Card-title {
-  font-size: 20px;
+  font-size: $font-size--l;
   margin: 0;
   color: #333;
 }
 
-.Card-author {
+.Card-location {
+  font-size: $font-size--s;
+  margin-top: 16px;
+  position: relative;
 
+  i {
+    color: $color--brand-blue;
+    position: absolute;
+    top: 2px;
+  }
+
+  p {
+    margin-left: 24px;
+  }
+}
+
+.Card-description {
+  font-size: $font-size--s;
+  margin-top: 16px;
+}
+
+.Card-list {
+  font-size: $font-size--s;
+  margin-top: 16px;
+  padding-left: 20px;
+}
+
+.Card-grid {
+  margin-top: 16px;
+  display: grid;
+}
+
+.Card-grid--2 {
+  grid-template-columns: 1fr 1fr;
+}
+
+.Card-grid--3 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.Card-grid--4 {
+  grid-template-columns: 1fr 1fr;
+}
+
+@include at-least($small-screen) {
+  .Card-grid--4 {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.Card-grid-value {
+  font-size: $font-size--m;
+}
+
+.Card-grid-label {
+  font-size: $font-size--s;
+}
+
+.Card-actions {
+  margin-top: 16px;
+
+  a {
+    margin-right: 4px;
+  }
 }
