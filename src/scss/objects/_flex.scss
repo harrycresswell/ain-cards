@@ -2,18 +2,21 @@
  * Display Flex
  */
 
-.o-flex {
-  display: flex;
+@include at-least($small-screen) {
+  .Flex {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
-.o-flex-1 {
+.Flex-1 {
   flex: 1;
 }
 
-.o-flex-2 {
+.Flex-2 {
   flex: 2;
 }
 
-.o-flex-3 {
+.Flex-3 {
   flex: 3;
 }
