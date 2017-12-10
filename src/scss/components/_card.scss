@@ -1,11 +1,12 @@
 /**
- * Component: Card
+ * Component: Card Block
  */
+
+ // This is the core component assigned to every card
 
 .Card {
   background: $color--white;
   border: solid 1px $color--border;
-  border-radius: $radius--10;
   display: flex;
   flex-direction: column;
   min-height: 100%;
@@ -19,6 +20,13 @@
   }
 }
 
+/**
+ * Component Modifier: Card Landscape
+ */
+
+
+ // Use modifier after .Card to create a landcape style card layout
+
 .Card--landscape {
   display: grid;
   grid-template-columns: 1fr;
@@ -30,51 +38,51 @@
     }
 }
 
+ // Use modifier after .Card to create a card with rounded corners
+
+.Card--radius {
+  border-radius: $radius--10;
+}
+
+// Use modifier after .Card-thumb to create the corect border raduis for portrait style cards
+
+.Card-thumb--portrait {
+ border-radius: $radius--10 $radius--10 0 0;
+}
+
+// Use modifier after .Card-thumb to create the corect border raduis for landscape style cards
+
+.Card-thumb--landscape {
+ border-radius: $radius--10 $radius--10 0 0;
+}
+
+@include at-least($phone-wide) {
+ .Card-thumb--landscape {
+   border-radius: $radius--10 0 0 0;
+ }
+}
+
+
+/**
+ * Component: Card elements
+ */
+
+
 .Card-thumb {
   background: $color--darker-still;
   background-size: cover;
   background-position: center center;
-  min-height: 152px;
-  padding: 24px;
+  min-height: 134px;
   position: relative;
 }
 
-.Card-thumb--portrait {
-  border-radius: $radius--10 $radius--10 0 0;
-}
-
-.Card-thumb--landscape {
-  border-radius: $radius--10 $radius--10 0 0;
-}
-
-@include at-least($phone-wide) {
-  .Card-thumb--landscape {
-    border-radius: $radius--10 0 0 $radius--10;
-  }
-}
-
-.Card-avatar {
-  position: absolute;
-  bottom: 24px;
-}
-
-.Card-content {
-  padding: 24px;
-}
-
-.Card-progress {
-
-}
-
 .Card-title {
-  font-size: $font-size--l;
-  margin: 0;
+  font-size: $font-size--xl;
   color: #333;
 }
 
 .Card-location {
   font-size: $font-size--s;
-  margin-top: 16px;
   position: relative;
 
   i {
@@ -82,27 +90,36 @@
     position: absolute;
     top: 2px;
   }
-
-  p {
-    margin-left: 24px;
-  }
 }
 
 .Card-description {
   font-size: $font-size--s;
-  margin-top: 16px;
+  min-height: 72px;
+}
+
+.Card-expertise {
+  font-size: $font-size--s;
 }
 
 .Card-list {
   font-size: $font-size--s;
-  margin-top: 16px;
-  padding-left: 20px;
 }
 
-.Card-grid {
-  margin-top: 16px;
-  display: grid;
+// Card flexbox
+
+.Card-flex {
+  display: flex;
+  justify-content: space-between;
 }
+
+// Use to create a grid within a card
+
+.Card-grid {
+  display: grid;
+  grid-gap: 0 16px;
+}
+
+// Use to modify .Card-grid with the correct number of grid columns the card requires.
 
 .Card-grid--2 {
   grid-template-columns: 1fr 1fr;
@@ -116,24 +133,32 @@
   grid-template-columns: 1fr 1fr;
 }
 
+.Card-grid--5 {
+  grid-template-columns: 1fr;
+}
+
+.Card-grid--6 {
+  grid-template-columns: 1fr;
+}
+
 @include at-least($small-screen) {
   .Card-grid--4 {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
+
+  .Card-grid--5 {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  .Card-grid--6 {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
 }
 
-.Card-grid-value {
+.Card-value {
   font-size: $font-size--m;
 }
 
-.Card-grid-label {
+.Card-label {
   font-size: $font-size--s;
-}
-
-.Card-actions {
-  margin-top: 16px;
-
-  a {
-    margin-right: 4px;
-  }
 }
