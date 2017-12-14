@@ -1,22 +1,94 @@
 /**
- * Display Flex
+ * Flexbox grid
+  based on https://codepen.io/harrycresswell/pen/MrYvmZ
+  and https://www.taniarascia.com/easiest-flex-grid-ever/
  */
 
-@include at-least($small-screen) {
-  .Flex {
+ /*
+ Object: Core Flexbox grid
+ */
+
+
+ // Mobie first (grids forms a single column on smaller screens)
+
+.Flex-column {
+  flex-basis: 100%;
+}
+
+// Flex when screens get larger
+
+@include at-least($phone-wide) {
+  .Flex-row {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
   }
+
+  .Flex-column {
+    flex: 1;
+  }
+
 }
 
-.Flex-1 {
-  flex: 1;
+/**
+ * Object Modifiers: Flexbox styles.
+ */
+
+/**
+ * Column sizes.
+ * Add to Flex-column to modify individual cells
+ * E.g. class="Flex-column Flex--75"
+ */
+
+ // This needs updating to something less hacky
+
+@include at-least($phone-wide) {
+
+  .Flex--75 {
+    flex: 7.5;
+  }
+
+  .Flex--65 {
+    flex: 6.5;
+  }
+
+  .Flex--50 {
+    flex: 5;
+  }
+
+  .Flex--30 {
+    flex: 3;
+  }
+
+  .Flex--25 {
+    flex: 2.5;
+  }
+
+  .Flex--15 {
+    flex: 1.5;
+  }
+
 }
 
-.Flex-2 {
-  flex: 2;
+/**
+ * Add Gutters to columns.
+ * Add to Flex-row to give columns gutters
+ * E.g. class="Flex-row Flex--gutters"
+ */
+
+
+.Flex--gutters > div {
+  margin: 16px;
 }
 
-.Flex-3 {
-  flex: 3;
+/**
+ * Non-responsive grids.
+ * Add to Flex-row to keep grids even on smaller screens
+ * E.g. class="Flex-row Flex--nr"
+ */
+
+.Flex-row.Flex--nr{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
