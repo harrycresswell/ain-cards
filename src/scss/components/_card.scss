@@ -7,8 +7,8 @@
 .Card {
   background: $color--white;
   border: solid 1px $color--border;
-  display: flex;
-  flex-direction: column;
+//display: flex;
+  //flex-direction: column;
   min-height: 100%;
   position: relative;
   top: 0;
@@ -47,13 +47,13 @@
 // Use modifier after .Card-thumb to create the corect border raduis for portrait style cards
 
 .Card-thumb--portrait {
- border-radius: $radius--10 $radius--10 0 0;
+  border-radius: $radius--10 $radius--10 0 0;
 }
 
 // Use modifier after .Card-thumb to create the corect border raduis for landscape style cards
 
 .Card-thumb--landscape {
- border-radius: $radius--10 $radius--10 0 0;
+  border-radius: $radius--10 $radius--10 0 0;
 }
 
 @include at-least($phone-wide) {
@@ -74,6 +74,7 @@
   background-position: center center;
   min-height: 134px;
   position: relative;
+  height: 100%;
 }
 
 .Card-title {
@@ -105,6 +106,11 @@
   font-size: $font-size--s;
 }
 
+.Card-text-links {
+  a {
+    display: block;
+  }
+}
 // Card flexbox
 
 .Card-flex {
@@ -134,7 +140,7 @@
 }
 
 .Card-grid--5 {
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 
 .Card-grid--6 {
