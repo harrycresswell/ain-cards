@@ -1,23 +1,17 @@
-// Global colors
-$color--white: #ffffff !default;
-$color--darker-still: #1B202F !default;
-$color--darker: #253142 !default;
-$color--gray-dark: #37474F !default;
-$color--gray-light: #9ea3a6 !default;
-$color--gray-lighter: #DFE9F2 !default;
-$color--gray-lightest: #F6F9FB !default;
-
-$color--brand-blue: #4A8CFF !default;
-$color--success: #3AD283 !default;
-
 // New global color scale
-$color-white: #ffffff;
-$color-brand: #4A8CFF;
-$color-success: #3AD283;
+$color-white: #ffffff !default;
+$color-brand: #4A8CFF !default;
+$color-success: #3AD283 !default;
+
+$color-info: #008CFF; // rgb(0, 140, 255)
+$color-positive: #13CE66; // rgb(53, 203, 125)
+$color-negative: #FF4949; // rgb(249, 67, 67)
+$color-warning: #FFC82C; // rgb(255, 200, 44)
 
 $color-grey-90: #1B202F;
 $color-grey-80: #253142;
 $color-grey-70: #37474F;
+$color-grey-60: #4F5766;
 $color-grey-50: #9ea3a6;
 $color-grey-30: #CDD3D9;
 $color-grey-20: #DFE9F2;
