@@ -2,20 +2,15 @@
 
 ## cards
 
+- font size helpers
 - update card specific breakpoints
 - add tooltips
-- add css grid fallback with flexbox or floats
 - flip back to live UI kit when done
-
-
-## UI toolkit
-
-- style .Marker in UI kit
-- Update margin and padding units to REM in UI kit
 
 
 ## done
 
+- ~~style .Marker in UI kit~~
 - ~~fix cross browser bugs~~
 - ~~fix desc text color~~
 - ~~add ui color helpers~~
