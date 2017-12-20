@@ -1,0 +1,21 @@
+.Link {
+  opacity: 1;
+  text-decoration: none;
+  transition: color .15s ease-in;
+}
+
+.Link:active, .Link:focus, .Link:hover, .Link:visited {
+  opacity: .8;
+  text-decoration: none;
+  transition: color .15s ease-in;
+}
+
+
+.Link--underline {
+  text-decoration: underline !important;
+}
+
+.Link--underline-hover:focus,
+.Link--underline-hover:hover {
+  text-decoration: underline;
+}
