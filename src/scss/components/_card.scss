@@ -5,10 +5,8 @@
  // This is the core component assigned to every card
 
 .Card {
-  background: $color--white;
-  border: solid 1px $color--border;
-//display: flex;
-  //flex-direction: column;
+  background: $color-white;
+  border: solid 1px $color-grey-30;
   min-height: 100%;
   position: relative;
   top: 0;
@@ -69,7 +67,7 @@
 
 
 .Card-thumb {
-  background: $color--darker-still;
+  background: $color-grey-90;
   background-size: cover;
   background-position: center center;
   min-height: 134px;
@@ -79,21 +77,23 @@
 
 .Card-title {
   font-size: $font-size--xl;
-  color: #333;
+  color: $color-grey-80;
 }
 
 .Card-location {
+  color: $color-grey-60;
   font-size: $font-size--s;
   position: relative;
 
   i {
-    color: $color--brand-blue;
+    color: $color-brand;
     position: absolute;
     top: 2px;
   }
 }
 
 .Card-description {
+  color: $color-grey-60;
   font-size: $font-size--s;
   min-height: 72px;
 }
@@ -166,5 +166,6 @@
 }
 
 .Card-label {
+  color: $color-grey-60;
   font-size: $font-size--s;
 }
