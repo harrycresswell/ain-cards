@@ -2,14 +2,18 @@
 
 ## cards
 
-- font size helpers
+- use font size helpers from UI kit
 - update card specific breakpoints
-- add tooltips
+
+
+## notes
 - flip back to live UI kit when done
 
 
 ## done
 
+- ~~update color and link classes to match UI kit~~
+- ~~add tooltips~~
 - ~~style .Marker in UI kit~~
 - ~~fix cross browser bugs~~
 - ~~fix desc text color~~
