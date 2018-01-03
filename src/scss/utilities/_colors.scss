@@ -1,35 +1,27 @@
 // UI Colors
 
-.Color--brand, .Color--info {
+.color-brand {
   color: $color-brand !important;
-}
-
-.Color--danger {
-  color: $color-negative !important;
-}
-
-.Color--success {
-  color: $color-success !important;
-}
-
-.Color--warning {
-  color: $color-warning !important;
 }
 
 // UI Greyscale
 
-.Color--white {
+.color-white {
   color: $color-white;
 }
 
-.Color--dark {
+.color-grey-80 {
   color: $color-grey-80;
 }
 
-.Color--grey-dark {
+.color-grey-60 {
   color: $color-grey-60;
 }
 
-.Color--grey-light {
+.color-grey-30 {
   color: $color-grey-30;
+}
+
+.color-green {
+  color: $color-positive;
 }
