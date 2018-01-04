@@ -1,8 +1,9 @@
 #todo
 
 ## cards
-
-- use font size helpers from UI kit
+- extract color helpers and add to UI toolkit
+- extract link helpers and add to toolkit
+- update color vars to match UI kit
 - update card specific breakpoints
 
 
@@ -12,6 +13,7 @@
 
 ## done
 
+- ~~use font size helpers from UI kit and remove unnecessary classes~~
 - ~~update color and link classes to match UI kit~~
 - ~~add tooltips~~
 - ~~style .Marker in UI kit~~

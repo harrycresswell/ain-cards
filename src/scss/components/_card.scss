@@ -75,11 +75,6 @@
   height: 100%;
 }
 
-.Card-title {
-  font-size: $font-size--xl;
-  color: $color-grey-80;
-}
-
 .Card-location {
   color: $color-grey-60;
   font-size: $font-size--s;
@@ -96,14 +91,6 @@
   color: $color-grey-60;
   font-size: $font-size--s;
   min-height: 72px;
-}
-
-.Card-expertise {
-  font-size: $font-size--s;
-}
-
-.Card-list {
-  font-size: $font-size--s;
 }
 
 .Card-text-links {
@@ -159,13 +146,4 @@
   .Card-grid--6 {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   }
-}
-
-.Card-value {
-  font-size: $font-size--m;
-}
-
-.Card-label {
-  color: $color-grey-60;
-  font-size: $font-size--s;
 }
