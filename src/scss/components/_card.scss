@@ -75,6 +75,16 @@
   height: 100%;
 }
 
+.Card-label {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+
+  span {
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  }
+}
+
 .Card-location {
   color: $color-grey-60;
   font-size: $font-size--s;
