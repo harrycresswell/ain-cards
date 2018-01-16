@@ -2,7 +2,7 @@
  * Component: Card Block
  */
 
- // This is the core component assigned to every card
+ // This is the core component assigned to every card. Card is portrait by default.
 
 .Card {
   background: $color-white;
@@ -19,28 +19,24 @@
 }
 
 /**
- * Component Modifier: Card Landscape
+ * Component: Card-thumb
  */
 
 
- // Use modifier after .Card to create a landcape style card layout
+// use .Card-thumb to set cover image
 
-.Card--landscape {
-  display: grid;
-  grid-template-columns: 1fr;
+.Card-thumb {
+  background: $color-grey-90;
+  background-size: cover;
+  background-position: center center;
+  min-height: 134px;
+  position: relative;
+  height: 100%;
 }
 
-@include at-least($phone-wide) {
-    .Card--landscape {
-      grid-template-columns: 1fr 1fr;
-    }
-}
-
- // Use modifier after .Card to create a card with rounded corners
-
-.Card--radius {
-  border-radius: $radius--10;
-}
+/**
+ * Component Modifier: Card-thumb portrait & Landscape
+ */
 
 // Use modifier after .Card-thumb to create the corect border raduis for portrait style cards
 
@@ -60,20 +56,14 @@
  }
 }
 
+// Use modifier after .Card to create a card with rounded corners
 
-/**
- * Component: Card elements
- */
-
-
-.Card-thumb {
-  background: $color-grey-90;
-  background-size: cover;
-  background-position: center center;
-  min-height: 134px;
-  position: relative;
-  height: 100%;
+.Card--radius {
+ border-radius: $radius--10;
 }
+
+
+// .Card label contains `.Label`, positioning labels in the top right corner of a card.
 
 .Card-label {
   position: absolute;
@@ -84,6 +74,8 @@
     box-shadow: 0 4px 6px rgba(0,0,0,0.3);
   }
 }
+
+// Card location contains location pin icon.
 
 .Card-location {
   color: $color-grey-60;
@@ -97,32 +89,30 @@
   }
 }
 
+// Use .Card-description to control min-height of description.
+
 .Card-description {
   color: $color-grey-60;
   font-size: $font-size--s;
   min-height: 72px;
 }
 
+// inlines text links
+
 .Card-text-links {
   a {
     display: block;
   }
 }
-// Card flexbox
 
-.Card-flex {
-  display: flex;
-  justify-content: space-between;
-}
-
-// Use to create a grid within a card
+// Use to create a grid within a card, for example when displaying figures.
 
 .Card-grid {
   display: grid;
   grid-gap: 0 16px;
 }
 
-// Use to modify .Card-grid with the correct number of grid columns the card requires.
+// You will need to modify `.Card-grid` with the correct number of grid columns, depending on what the card requires.
 
 .Card-grid--2 {
   grid-template-columns: 1fr 1fr;
