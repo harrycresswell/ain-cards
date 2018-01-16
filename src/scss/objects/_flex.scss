@@ -92,3 +92,16 @@
     flex-direction: row;
     flex-wrap: nowrap;
 }
+
+/**
+ * Object Modifiers: Demo specific modifer, don not use in production.
+ */
+
+.Flex-demo {
+  transition: background-color 0.3s ease;
+  border: 1px solid #33cccc;
+
+  &:hover {
+   background: rgba(51, 153, 204,.6);
+ }
+}
